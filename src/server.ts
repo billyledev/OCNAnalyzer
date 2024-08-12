@@ -20,7 +20,7 @@ const SSL_CERT_PATH = path.join(__dirname, 'certificates', 'cert.pem');
 if (SSL_ENABLED && (!fs.existsSync(SSL_KEY_PATH) || !fs.existsSync(SSL_CERT_PATH))) {
   childProcess.execSync(`openssl genrsa -out ${SSL_KEY_PATH}`);
   childProcess.execSync(`openssl req -new -key ${SSL_KEY_PATH} -out ${SSL_CSR_PATH} \
--subj "/C=FR/ST=Alpes-Maritimes/L=Valbonne/O=OCN Analyzer/OU=/CN=ocnanalyzer.local"`);
+-subj "/C=FR/ST=Alpes-Maritimes/L=Valbonne/O=OCN Analyzer/OU=/CN=localhost"`);
   childProcess.execSync(`openssl x509 -req -days 365 -in ${SSL_CSR_PATH} \
 -signkey ${SSL_KEY_PATH} -out ${SSL_CERT_PATH}`);
 }
