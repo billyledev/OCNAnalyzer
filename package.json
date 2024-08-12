@@ -1,0 +1,37 @@
+{
+  "name": "ocn-analyzer",
+  "version": "1.0.0",
+  "main": "src/index.ts",
+  "author": "billyledev",
+  "private": true,
+  "scripts": {
+    "start": "nodemon -e ts,json -x ts-node src/index.ts",
+    "build": "tsc && tsc-alias",
+    "lint": "eslint src/*.ts src/**/*.ts"
+  },
+  "dependencies": {
+    "@hapi/boom": "^10.0.1",
+    "@hapi/hapi": "^21.3.2",
+    "@hapi/hoek": "^11.0.4",
+    "dotenv": "^16.3.1",
+    "hapi-pino": "^12.1.0",
+    "http-status-codes": "^2.2.0",
+    "pino-pretty": "^10.2.0",
+    "tsc-alias": "^1.8.8"
+  },
+  "devDependencies": {
+    "@types/node": "^20.4.5",
+    "@typescript-eslint/eslint-plugin": "^7.18.0",
+    "@typescript-eslint/parser": "^7.18.0",
+    "eslint": "^8.0.1",
+    "eslint-config-airbnb-typescript": "^18.0.0",
+    "eslint-import-resolver-typescript": "^3.6.1",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-n": "^15.0.0 || ^16.0.0 ",
+    "eslint-plugin-promise": "^6.0.0",
+    "nodemon": "^3.0.1",
+    "ts-node": "^10.9.1",
+    "tsconfig-paths": "^4.2.0",
+    "typescript": "*"
+  }
+}
