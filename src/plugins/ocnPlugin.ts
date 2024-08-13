@@ -2,7 +2,7 @@ import type Hapi from '@hapi/hapi';
 import { StatusCodes } from 'http-status-codes';
 
 const ocnResponse = `<?xml version="1.0"?>
-<soap:Envelope>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope" xmlns:iata="http://www.iata.org/IATA/2015/00/2018.2/IATA_Acknowledgement">
   <soap:Header/>
   <soap:Body>
     <iata:IATA_Ack>
